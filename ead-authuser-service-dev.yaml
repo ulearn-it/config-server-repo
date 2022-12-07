@@ -22,6 +22,8 @@ spring:
   output:
     ansi:
       enabled: Always
+  rabbitmq:
+    addresses: amqps://gvrthxqq:PB1P8L2PNMsIpyzMrK47NydGomEI5u2o@beaver.rmq.cloudamqp.com/gvrthxqq
 
 logging:
   level:
@@ -34,6 +36,9 @@ ead:
   api:
     url:
       course: 'http://ead-course-service/ead-course'
+  broker:
+    exchange:
+      userEvent: ead.userevent
 
 management:
   endpoints:

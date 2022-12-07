@@ -22,7 +22,8 @@ spring:
   output:
     ansi:
       enabled: Always
-
+  rabbitmq:
+    addresses: amqps://gvrthxqq:PB1P8L2PNMsIpyzMrK47NydGomEI5u2o@beaver.rmq.cloudamqp.com/gvrthxqq
 
 logging:
   level:
@@ -35,6 +36,15 @@ ead:
   api:
     url:
       authuser: 'http://ead-authuser-service/ead-authuser'
+  broker:
+    exchange:
+      userEventExchange: ead.userevent
+      notificationCommandExchange: ead.notificationcommand
+    queue:
+      userEventQueue:
+        name: ead.userevent.ms.course
+    key:
+      notificationCommandKey: ms.notification
 
 management:
   endpoints:
